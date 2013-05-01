@@ -10,4 +10,5 @@ target/
 
 # JetBrains IDEA #
 
+*.iws
 out/
