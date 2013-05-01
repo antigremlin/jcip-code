@@ -4,3 +4,10 @@
 *.jar
 *.war
 *.ear
+
+# Maven #
+target/
+
+# JetBrains IDEA #
+
+out/
