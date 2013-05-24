@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # Concurrent data structures
 
 - <http://bad-concurrency.blogspot.de/2011/02/non-blocking-concurrenthashmaptrie.html>
@@ -32,10 +30,8 @@ EngineYard
 Heroku
 Travis-ci
 
-=======
 # Notes
 
 - <http://blogs.atlassian.com/2009/10/automated_performance_testing_using_jmeter_and_maven/>
 - <http://mojo.codehaus.org/chronos/>
 - <http://www.vogella.com/articles/JavaAlgorithmsPrimeFactorization/article.html>
->>>>>>> 294b9e71d5895a04a9e3ec9e3c30124647f3e065
