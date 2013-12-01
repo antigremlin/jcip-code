@@ -1,31 +1,25 @@
 package net.jcip.examples;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.RejectedExecutionException;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
-public class UnsafeCounterTest extends ConcurrentHarness {
+public class SafeCounterTest extends ConcurrentHarness {
 
-    private UnsafeCounter counter;
+    private SafeCounter counter;
 
     @Before
     public void initCounters() {
-        counter = new UnsafeCounter();
+        counter = new SafeCounter();
         counter.reset();
     }
 
     @Test
-    public void testUnsafeIncrement() {
+    public void testSafeIncrement() {
         try {
             for (int i = 0; i < CYCLES; i++) {
                 executor.submit(new Runnable() {
