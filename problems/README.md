@@ -2,6 +2,8 @@
 
 ## A Simple Connection Pool
 
+Initial code is located in `spike.pool` package.
+
 Create a connection pool service with the following characteristics:
 
 - The service is startable and stoppable:
@@ -10,7 +12,7 @@ Create a connection pool service with the following characteristics:
 - The pool is configurable:
 -- minimum and maximum number of connections
 -- keep-alive time
--- the actual connection source (ConnectionSource interface)
+-- the actual connection source (`ConnectionSource` interface)
 
 When connection is requested, the pool does one of the following:
 
@@ -24,8 +26,8 @@ Implementation approach:
 
 - you can use Semaphores or BlockingQueues to manage free connections
 - you can use FutureTask for representing a connection being open (this is not the only option)
-- rely on object identity for the pooled connections: the objects passed to release() 
-  should be exactly the same objects returned from get(), etc.
+- rely on object identity for the pooled connections: the objects passed to `release()` 
+  should be exactly the same objects returned from `get()`, etc.
 
-You should implement 2 interfaces: PoolFactory and ConnectionPool. Please also provide 
-a good number of unit tests covering the ConnectionPool implementation.
+You should implement 2 interfaces: `PoolFactory` and `ConnectionPool`. Please also provide 
+a good number of unit tests covering the `ConnectionPool` implementation.
