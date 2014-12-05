@@ -1,2 +1,1 @@
-# Multithreaded Programmign Workshop
-
+# Multithreaded Programming Workshop
